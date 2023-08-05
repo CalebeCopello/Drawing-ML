@@ -106,6 +106,7 @@ orange1: #af3a03
 }
 body {
     background-color: var(--bgD);
+    color: white;
 }
 /* Div theme control */
 .divWrapperThemeButtons {

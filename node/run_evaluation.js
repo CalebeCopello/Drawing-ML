@@ -30,3 +30,4 @@ console.log("ACCURACY: "+
     utils.formatPercent(correctCount/totalCount)+
     ")"
 )
+

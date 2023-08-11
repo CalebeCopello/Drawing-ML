@@ -11,10 +11,16 @@ const {samples:trainingSamples}=JSON.parse(
     fs.readFileSync(constants.TRAINING)
 )
 
+const kNN=new KNN(trainingSamples,50)
+
+const {samples:testingSamples}=JSON.parse(
+    fs.readFileSync(constants.TRAINING)
+)
+
 let totalCount=0
 let correctCount=0
 for(const sample of testingSamples) {
-    const predictedLabel=KNN.predict(sample.point)
+    const {label:predictedLabel}=kNN.predict(sample.point)
     correctCount+=predictedLabel==sample.label 
     totalCount++    
 }
